@@ -1,11 +1,10 @@
-import React from 'react'
-import { FaHeart, FaHeartBroken } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
-
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { FaHeart } from "react-icons/fa";
 export default function Header() {
-
-  const wishListCount = useSelector((state) => state.wishList.value)
   
+  const wishlist = useSelector((state) => state.wishlist.items);
+
   return (
     <header className="header">
       <div className="logo">
@@ -13,17 +12,14 @@ export default function Header() {
       </div>
       <nav className="nav-links">
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About</a></li> 
           <li><a href="#products">Products</a></li>
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
-      <div className="wishlist">
-        <FaHeart className="wishlist-icon" />
-        Wishlist
-        <span className="wishlist-count">{wishListCount}</span>
+     
+      <div className="wishlist-count">
+        <p> <FaHeart /> {wishlist.length}</p>
       </div>
     </header>
-  )
-}
-
+  );}

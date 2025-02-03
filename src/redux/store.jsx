@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
- import wishListSlice from '../features/counter/whishListSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import wishlistReducer from '../features/counter/whishListSlice';
 
- const store = configureStore({
-  reducer: {
-    wishList: wishListSlice, 
-  },
+const store = configureStore({
+    reducer: {
+        wishlist: wishlistReducer,
+    },
 });
 
-export default store;
+export default store; 
