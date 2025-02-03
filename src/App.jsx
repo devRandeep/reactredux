@@ -11,9 +11,7 @@ function App() {
 
   return (
     <>
-      <Provider store={store}>
-        <Header />
-      </Provider>
+      <Header />
       <Products />
     </>
   )

@@ -46,14 +46,13 @@ export default function Products() {
                     <Card.Body>
                         <Card.Title>{product.productTitle}</Card.Title>
                         <Card.Text>{product.productDesc}</Card.Text>
-                        <div className="d-flex gap-2 align-items-center">    
+                        <div className="d-flex gap-2 align-items-center">
                             <button className='btn' id='whishList'
                                 onClick={() => handleAddWishList(product)}
-                                style={{ color: wishlist.some(item => item.id === product.id) ?'red': 'black', fontSize:"14px", display:"flex", gap:"10px", margin:"0px auto", }}>
-                                    Add To Wishlist
-                            <FaHeart/>
-
-                                </button>               
+                                style={{ color: wishlist.some(item => item.id === product.id) ? 'red' : 'black', fontSize: "14px", display: "flex", gap: "10px", margin: "0px auto", }}>
+                                Add To Wishlist
+                                <FaHeart />
+                            </button>
                         </div>
                     </Card.Body>
                 </Card>

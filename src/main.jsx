@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* Wrap complete application in provide then redux will work */}
     <Provider store={store}>
       <App />
     </Provider>
