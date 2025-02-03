@@ -19,7 +19,7 @@ export default function Header() {
       </nav>
      
       <div className="wishlist-count">
-        <p> <FaHeart /> {wishlist.length}</p>
+        <p> <b style={{color: "red"}}>Whishlist Items:</b> <b>{wishlist.length}</b></p>
       </div>
     </header>
   );}
